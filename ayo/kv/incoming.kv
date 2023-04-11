@@ -1,0 +1,9 @@
+<Incoming>:
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+    MDIconButton:
+        icon: "arrow-left"
+        pos_hint: {'center_x': 0.09,'center_y': 0.95}
+        on_release:
+            root.manager.transition.direction = "right"
+            root.manager.current = "register"

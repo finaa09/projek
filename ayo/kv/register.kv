@@ -1,0 +1,31 @@
+<Register>:
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+    MDIconButton:
+        icon: "arrow-left"
+        pos_hint: {'center_x': 0.09,'center_y': 0.95}
+        on_release:
+            root.manager.transition.direction = "right"
+            root.manager.current = "coal"
+    MDRectangleFlatButton:
+        text: 'Daily'
+        font_name: 'SBPoppins'
+        size_hint: .3, .1
+        font_size: "16sp"
+        theme_text_color: "Custom"
+        line_color: "blue"
+        pos_hint: {'center_x': 0.5,'center_y': 0.7}
+        on_release:
+            root.manager.transition.direction = "left"
+            root.manager.current = "daily"
+    MDRectangleFlatButton:
+        text: 'Incoming'
+        font_name: 'SBPoppins'
+        size_hint: .1, .1
+        font_size: "16sp"
+        theme_text_color: "Custom"
+        line_color: "blue"
+        pos_hint: {'center_x': 0.5,'center_y': 0.5}
+        on_release:
+            root.manager.transition.direction = "left"
+            root.manager.current = "incoming"

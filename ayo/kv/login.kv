@@ -1,0 +1,53 @@
+<Login>:
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+    MDIconButton:
+        icon: "arrow-left"
+        pos_hint: {'center_x': 0.09,'center_y': 0.95}
+        on_release:
+            root.manager.transition.direction = "right"
+            root.manager.current = "welcome"
+    MDFloatLayout:
+        size_hint: .7, .07
+        pos_hint: {'center_x': 0.5,'center_y': 0.73}
+        TextInput:
+            hint_text: "Username"
+            font_name: 'MPoppins'
+            size_hint_y: .75
+            pos_hint: {'center_x': 0.43,'center_y': 0.6}
+            background_color: 1, 1, 1, 0
+            foreground_color: rgba(0, 0, 59, 255)
+            cursor_color: rgba(0, 0, 59, 255)
+            font_size: "14sp"
+            cursor_width: "2sp"
+            multiline: False
+        MDFloatLayout:
+            pos_hint: {'center_x': 0.45,'center_y': 0.0}
+            size_hint_y: .03
+            md_bg_color: rgba(178, 178, 178, 255)
+    MDFloatLayout:
+        size_hint: .7, .07
+        pos_hint: {'center_x': 0.5,'center_y': 0.6}
+        TextInput:
+            hint_text: "Password"
+            font_name: 'MPoppins'
+            size_hint_y: .75
+            pos_hint: {'center_x': 0.43,'center_y': 0.5}
+            background_color: 1, 1, 1, 0
+            foreground_color: rgba(0, 0, 59, 255)
+            cursor_color: rgba(0, 0, 59, 255)
+            font_size: "14sp"
+            cursor_width: "2sp"
+            multiline: False
+            password: True
+        MDFloatLayout:
+            pos_hint: {'center_x': 0.45,'center_y': 0.0}
+            size_hint_y: .03
+            md_bg_color: rgba(178, 178, 178, 255)    
+    MDRoundFlatButton:
+        text: 'Continue'
+        font_name: 'SBPoppins'
+        size_hint: .6, .065
+        pos_hint: {'center_x': 0.5,'center_y': 0.28}
+        on_release: 
+            root.manager.current = "standard"

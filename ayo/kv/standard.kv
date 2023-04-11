@@ -1,0 +1,24 @@
+<Standard>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            title: "Chemical Laboratory"
+            font_name: 'SBPoppins'
+        MDFloatLayout:
+            md_bg_color: 1, 1, 1, 1
+    MDRectangleFlatButton:  
+        size_hint: .5, .25
+        halign: "center"
+        pos_hint: {'center_x': 0.5, 'center_y': .7}
+        on_release: 
+            root.manager.transition.direction = "left"
+            root.manager.current = "coal"      
+        Image:
+            source: "assets/image/coal.png"
+            size_hint: .4, .3
+    MDLabel:
+        text: "SF 1523"
+        font_size: "18sp"
+        font_name: 'MPoppins'
+        halign: "center"
+        pos_hint: {'center_y': 0.62}

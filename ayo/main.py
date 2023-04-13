@@ -2,7 +2,7 @@ from kivymd.app import MDApp
 from kivymd.uix.screenmanager import ScreenManager
 from kivy.core.text import LabelBase
 from kivy.core.window import Window
-from kivymd.uix.scrollview import MDScrollView
+
 Window.size = (320, 580)
 
 from screens.screens import *
@@ -11,7 +11,7 @@ class WindowManager(ScreenManager):
     pass
 
 
-class Test(MDScrollView, MDApp):
+class Test(MDApp):
     def build(self):
         self.wm = WindowManager()
         screens = [

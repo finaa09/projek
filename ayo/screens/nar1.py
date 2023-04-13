@@ -1,6 +1,7 @@
 from kivymd.uix.screen import MDScreen
 from kivy.core.text import LabelBase
 from kivy.lang import Builder
+from kivymd.uix.scrollview import ScrollView
 
 class Nar1(MDScreen):
     def __init__(self, **kwargs):

@@ -6,4 +6,15 @@
         pos_hint: {'center_x': 0.09,'center_y': 0.95}
         on_release:
             root.manager.transition.direction = "right"
-            root.manager.current = "register"
+            root.manager.current = "register"    
+    #composite
+    MDRectangleFlatButton:
+        text: 'C1'
+        font_name: 'SBPoppins'
+        size_hint: .3, .1
+        font_size: "16sp"
+        theme_text_color: "Custom"
+        line_color: "blue"
+        pos_hint: {'center_x': 0.25,'center_y': 0.7}
+        on_release: 
+            root.manager.current = "custom1"

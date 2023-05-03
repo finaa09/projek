@@ -1,0 +1,107 @@
+<Result2>:
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+    
+    #panah
+    MDIconButton:
+        icon: "arrow-left"
+        pos_hint: {'center_x': 0.09,'center_y': 0.95}
+        on_release:
+            root.manager.transition.direction = "right"
+            root.manager.current = "nar1"
+
+    MDLabel:
+        text: "Result"
+        font_size: "14sp"
+        halign: "center"
+        font_name: 'SBPoppins'
+        pos_hint: {'center_y': 0.9}
+
+    MDFloatLayout:
+        MDLabel:
+            text: "H2O (ad)"
+            font_size: "11sp"
+            halign: "left"
+            font_name: 'MPoppins'
+            pos_hint: {'center_x': 0.52,'center_y': 0.8}
+        TextInput:
+            id: h2oad
+            font_size: "10sp"
+            hint_text: '0.0000'
+            size_hint: .3, .04
+            pos_hint: {'center_x': 0.8,'center_y': 0.8}
+
+    MDFloatLayout:
+        MDLabel:
+            text: "GCV"
+            font_size: "11sp"
+            halign: "left"
+            font_name: 'MPoppins'
+            pos_hint: {'center_x': 0.52,'center_y': 0.75}
+        TextInput:
+            id: gcv
+            hint_text: '0.0000'
+            font_size: "10sp"
+            size_hint: .3, .04
+            pos_hint: {'center_x': 0.8,'center_y': 0.75}
+    MDFloatLayout:
+        MDLabel:
+            text: "Ash (ad)"
+            font_size: "11sp"
+            halign: "left"
+            font_name: 'MPoppins'
+            pos_hint: {'center_x': 0.52,'center_y': 0.7}
+        TextInput:
+            id: ash
+            hint_text: '0.0000'
+            font_size: "10sp"
+            size_hint: .3, .04
+            pos_hint: {'center_x': 0.8,'center_y': 0.7}
+    MDFloatLayout:
+        MDLabel:
+            text: "H2O (kb)"
+            font_size: "11sp"
+            halign: "left"
+            font_name: 'MPoppins'
+            pos_hint: {'center_x': 0.52,'center_y': 0.65}
+        TextInput:
+            id: kb
+            hint_text: '0.0000'
+            font_size: "10sp"
+            size_hint: .3, .04
+            pos_hint: {'center_x': 0.8,'center_y': 0.65}
+
+    MDFloatLayout:
+        MDLabel:
+            text: "VM"
+            font_size: "11sp"
+            halign: "left"
+            font_name: 'MPoppins'
+            pos_hint: {'center_x': 0.52,'center_y': 0.6}
+        TextInput:
+            id: vm
+            hint_text: '0.0000'
+            font_size: "10sp"
+            size_hint: .3, .04
+            pos_hint: {'center_x': 0.8,'center_y': 0.6}
+    MDFloatLayout:
+        MDLabel:
+            text: "Fixed Carbon"
+            font_size: "11sp"
+            halign: "left"
+            font_name: 'MPoppins'
+            pos_hint: {'center_x': 0.52,'center_y': 0.55}
+        TextInput:
+            id: fc
+            hint_text: '0.0000'
+            font_size: "10sp"
+            size_hint: .3, .04
+            pos_hint: {'center_x': 0.8,'center_y': 0.55}
+
+    MDRoundFlatButton:
+        text: 'Save'
+        font_name: 'SBPoppins'
+        size_hint: .6, .065
+        pos_hint: {'center_x': 0.5,'center_y': 0.18}
+        on_release: 
+            root.manager.current = "standard"

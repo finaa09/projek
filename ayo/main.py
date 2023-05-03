@@ -21,10 +21,21 @@ class Test(MDApp):
             Coal(name="coal"),
             Register(name="register"),
             Daily(name="daily"),
-            Incoming(name="incoming"),
             Nar1(name="nar1"),
-            Result(name="result"),
-
+            Comp1(name="comp1"),
+            Grave1(name="grave1"),
+            Day1(name="day1"),
+            Swing1(name="swing1"),
+            Comp2(name="comp2"),
+            Result1(name="result1"),
+            Result2(name="result2"),
+            Result3(name="result3"),
+            Result4(name="result4"),
+            Result5(name="result5"), 
+            Incoming(name="incoming"),
+            Custom1(name="custom1"),
+            Result9(name="result9"),
+            File(name="file"),
         ]
         for screens in screens:
             self.wm.add_widget(screens)

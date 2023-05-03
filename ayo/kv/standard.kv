@@ -22,3 +22,20 @@
         font_name: 'MPoppins'
         halign: "center"
         pos_hint: {'center_y': 0.62}
+
+    MDRectangleFlatButton:  
+        size_hint: .5, .25
+        halign: "center"
+        pos_hint: {'center_x': 0.5, 'center_y': .4}
+        on_release: 
+            root.manager.transition.direction = "left"
+            root.manager.current = "file"      
+        Image:
+            source: "assets/image/coal.png"
+            size_hint: .4, .3
+    MDLabel:
+        text: "Result File"
+        font_size: "18sp"
+        font_name: 'MPoppins'
+        halign: "center"
+        pos_hint: {'center_y': 0.32}

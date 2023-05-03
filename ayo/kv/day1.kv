@@ -1,0 +1,178 @@
+<Day1>:    
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+
+    MDIconButton:
+        icon: "arrow-left"
+        pos_hint: {'center_x': 0.05,'center_y': 0.98}
+        on_release:
+            root.manager.transition.direction = "right"
+            root.manager.current = "nar1"
+
+#Ash
+    MDLabel:
+        text: "Ash (ad)"
+        font_size: "14sp"
+        halign: "center"
+        font_name: 'SBPoppins'
+        pos_hint: {'center_y': 0.94}
+    MDFloatLayout:
+        MDLabel:
+            text: "Container + sample weight"
+            font_size: "11sp"
+            halign: "left"
+            font_name: 'MPoppins'
+            pos_hint: {'center_x': 0.52,'center_y': 0.89}
+        TextInput:
+            id: cs_ash3
+            hint_text: '0.0000'
+            font_size: "10sp"
+            size_hint: .3, .035
+            pos_hint: {'center_x': 0.8,'center_y': 0.89}
+        MDLabel:
+            text: "g"
+            font_size: "11sp"
+            halign: "center"
+            font_name: 'MPoppins'
+            pos_hint: {'center_x': 0.92, 'center_y': 0.89}               
+    MDFloatLayout:
+        MDLabel:
+            text: "Container weight"
+            font_size: "11sp"
+            halign: "left"
+            font_name: 'MPoppins'
+            pos_hint: {'center_x': 0.52,'center_y': 0.85}
+        TextInput:
+            id: cw_ash3
+            hint_text: '0.0000'
+            font_size: "10sp"
+            size_hint: .3, .035
+            pos_hint: {'center_x': 0.8,'center_y': 0.85}
+        MDLabel:
+            text: "g"
+            font_size: "11sp"
+            halign: "center"
+            font_name: 'MPoppins'
+            pos_hint: {'center_x': 0.92, 'center_y': 0.85}                   
+    MDFloatLayout:
+        MDLabel:
+            text: "Container + Sample After Heated"
+            font_size: "11sp"
+            halign: "left"
+            font_name: 'MPoppins'
+            pos_hint: {'center_x': 0.52,'center_y': 0.81}
+        TextInput:
+            id: heat_ash3
+            hint_text: '0.0000'
+            font_size: "10sp"
+            size_hint: .3, .035
+            pos_hint: {'center_x': 0.8,'center_y': 0.81}
+        MDLabel:
+            text: "g"
+            font_size: "11sp"
+            halign: "center"
+            font_name: 'MPoppins'
+            pos_hint: {'center_x': 0.92, 'center_y': 0.81}                   
+    MDFloatLayout:
+        MDLabel:
+            text: "Result"
+            font_size: "11sp"
+            halign: "left"
+            font_name: 'MPoppins'
+            pos_hint: {'center_x': 0.52,'center_y': 0.77}
+        TextInput:
+            id: ash3
+            hint_text: '0.0000'
+            font_size: "10sp"
+            size_hint: .3, .035
+            pos_hint: {'center_x': 0.8,'center_y': 0.77}
+        MDLabel:
+            text: "%"
+            font_size: "11sp"
+            halign: "center"
+            font_name: 'MPoppins'
+            pos_hint: {'center_x': 0.92, 'center_y': 0.77}
+
+    #calculate
+    MDFillRoundFlatButton:
+        text: 'Calculate'
+        font_name: 'SBPoppins'
+        pos_hint: {'center_x': 0.5,'center_y': 0.72}
+        #on_release: root.calculate(cs_ash, cw_ash, heat_ash, ash) and open result page
+        on_release: root.calculate2(cs_ash3, cw_ash3, heat_ash3, ash3)
+
+    #H2O(kb)
+    MDFloatLayout:
+        MDLabel:
+            text: "H2O (kb)"
+            font_size: "12sp"
+            halign: "left"
+            font_name: 'SBPoppins'
+            pos_hint: {'center_x': 0.52,'center_y': 0.67}
+        TextInput:
+            id: kb3
+            hint_text: '0.0000'
+            font_size: "10sp"
+            size_hint: .3, .035
+            pos_hint: {'center_x': 0.8,'center_y': 0.67}
+        MDLabel:
+            text: "g"
+            font_size: "11sp"
+            halign: "center"
+            font_name: 'MPoppins'
+            pos_hint: {'center_x': 0.92, 'center_y': 0.67}       
+#GCV
+    MDLabel:
+        text: "GCV(ad)"
+        font_size: "14sp"
+        halign: "center"
+        font_name: 'SBPoppins'
+        pos_hint: {'center_y': 0.62}
+    MDFloatLayout:
+        MDLabel:
+            text: "Sample Weight"
+            font_size: "11sp"
+            halign: "left"
+            font_name: 'MPoppins'
+            pos_hint: {'center_x': 0.52,'center_y': 0.57}
+        TextInput:
+            id: wgcv3
+            hint_text: '0.0000'
+            font_size: "10sp"
+            size_hint: .3, .035
+            pos_hint: {'center_x': 0.8,'center_y': 0.57}
+        MDLabel:
+            text: "g"
+            font_size: "11sp"
+            halign: "center"
+            font_name: 'MPoppins'
+            pos_hint: {'center_x': 0.92, 'center_y': 0.57}               
+    MDFloatLayout:
+        MDLabel:
+            text: "Result"
+            font_size: "11sp"
+            halign: "left"
+            font_name: 'MPoppins'
+            pos_hint: {'center_x': 0.52,'center_y': 0.53}
+        TextInput:
+            id: gcv3
+            hint_text: '0.0000'
+            font_size: "10sp"
+            size_hint: .3, .035
+            pos_hint: {'center_x': 0.8,'center_y': 0.53}
+        MDLabel:
+            text: "cal/g"
+            font_size: "11sp"
+            halign: "center"
+            font_name: 'MPoppins'
+            pos_hint: {'center_x': 0.92, 'center_y': 0.53}    
+
+    #Save
+    MDFillRoundFlatButton:
+        text: 'View Result'
+        font_name: 'SBPoppins'
+        size_hint: .2, .05
+        pos_hint: {'center_x': 0.5,'center_y': 0.38}
+        on_release:
+            root.manager.transition.direction = "right"
+            root.manager.current = "result3"

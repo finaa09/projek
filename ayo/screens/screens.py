@@ -4,7 +4,18 @@ from screens.standard import Standard
 from screens.coal import Coal
 from screens.register import Register
 from screens.daily import Daily
-from screens.incoming import Incoming
 from screens.nar1 import Nar1
-from screens.result import Result
-
+from screens.comp1 import Comp1
+from screens.grave1 import Grave1
+from screens.day1 import Day1
+from screens.swing1 import Swing1
+from screens.comp2 import Comp2
+from screens.result1 import Result1
+from screens.result2 import Result2
+from screens.result3 import Result3
+from screens.result4 import Result4
+from screens.result5 import Result5
+from screens.incoming import Incoming
+from screens.custom1 import Custom1
+from screens.result9 import Result9
+from screens.file import File
